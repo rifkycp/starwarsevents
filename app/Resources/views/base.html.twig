@@ -2,7 +2,14 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>
+            {%- if block('tittle') -%}
+                {{- block('tittle') -}} | Starwars Events
+            {%- else -%}
+                Event from galaxy far far away
+            {%- endif -%}
+
+        </title>
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
