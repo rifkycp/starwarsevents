@@ -1,0 +1,10 @@
+yoda_event_event:
+    resource: "@YodaEventBundle/Resources/config/routing/event.yml"
+
+event_annotations:
+    resource: "@YodaEventBundle/Controller"
+    type: annotation
+
+yoda_event_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: YodaEventBundle:Default:index }

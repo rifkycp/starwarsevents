@@ -1,0 +1,31 @@
+#move to annotations
+#event:
+#    path:     /
+#    defaults: { _controller: "YodaEventBundle:Event:index" }
+
+event_show:
+    path:     /{id}/show
+    defaults: { _controller: "YodaEventBundle:Event:show" }
+
+event_new:
+    path:     /new
+    defaults: { _controller: "YodaEventBundle:Event:new" }
+
+event_create:
+    path:     /create
+    defaults: { _controller: "YodaEventBundle:Event:create" }
+    requirements: { _method: post }
+
+event_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "YodaEventBundle:Event:edit" }
+
+event_update:
+    path:     /{id}/update
+    defaults: { _controller: "YodaEventBundle:Event:update" }
+    requirements: { _method: post|put }
+
+event_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "YodaEventBundle:Event:delete" }
+    requirements: { _method: post|delete }
